@@ -3,7 +3,7 @@
 use byteorder::NetworkEndian;
 
 use super::query_builder::PgQueryBuilder;
-use super::{PgMetadataLookup, PgValue};
+use super::{PgValue};
 use crate::backend::*;
 use crate::deserialize::Queryable;
 use crate::pg::metadata_lookup::PgMetadataCacheKey;
@@ -94,7 +94,7 @@ impl<'a> HasRawValue<'a> for Pg {
 
 impl TypeMetadata for Pg {
     type TypeMetadata = PgTypeMetadata;
-    type MetadataLookup = PgMetadataLookup;
+    type MetadataLookup = ();
 }
 
 impl SupportsReturningClause for Pg {}

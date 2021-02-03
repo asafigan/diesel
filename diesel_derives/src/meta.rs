@@ -160,12 +160,12 @@ impl MetaItem {
             .map_err(|_| str.span().error("Invalid Rust type"))
     }
 
-    pub fn expect_str_value(&self) -> String {
-        self.str_value().unwrap_or_else(|e| {
-            e.emit();
-            path_to_string(&self.name())
-        })
-    }
+    // pub fn expect_str_value(&self) -> String {
+    //     self.str_value().unwrap_or_else(|e| {
+    //         e.emit();
+    //         path_to_string(&self.name())
+    //     })
+    // }
 
     pub fn str_value(&self) -> Result<String, Diagnostic> {
         self.lit_str_value().map(syn::LitStr::value)

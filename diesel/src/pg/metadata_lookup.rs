@@ -16,10 +16,10 @@ pub struct PgMetadataLookup {
 }
 
 impl PgMetadataLookup {
-    #[allow(clippy::new_ret_no_self)]
-    pub(crate) fn new(conn: &PgConnection) -> &Self {
-        unsafe { &*(conn as *const PgConnection as *const PgMetadataLookup) }
-    }
+    // #[allow(clippy::new_ret_no_self)]
+    // pub(crate) fn new(conn: &PgConnection) -> &Self {
+    //     unsafe { &*(conn as *const PgConnection as *const PgMetadataLookup) }
+    // }
 
     /// Determine the type metadata for the given `type_name`
     ///

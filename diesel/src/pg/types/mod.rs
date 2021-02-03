@@ -16,7 +16,7 @@ mod network_address;
 mod numeric;
 mod primitives;
 mod ranges;
-mod record;
+// mod record;
 #[cfg(feature = "uuid")]
 mod uuid;
 
